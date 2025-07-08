@@ -25,5 +25,6 @@ def main():
     print(dfRECEITAS.head())
 
     ##use -- salvar_no_financa(dfReceitas, "RECEITAS") para salvar no banco de dados FINANCA
+    
 if __name__ == "__main__":
     main()

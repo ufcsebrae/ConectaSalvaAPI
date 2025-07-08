@@ -16,12 +16,7 @@ class Consulta:
 
 # Dicionário contendo consultas SQL e MDX pré-definidas para uso
 consultas: Dict[str, Consulta] = {
-    "EMAIL": Consulta(
-        titulo="EMAIL",
-        tipo="sql",
-        sql=carregar_sql("conexao/consultas/email.sql"),
-        conexao="SPSVSQL39"
-    ),
+  
     "EXECUCAO": Consulta(
         titulo="EXECUÇÃO DAS DESPESAS ANUAIS",
         tipo="sql",
@@ -52,3 +47,4 @@ consultas: Dict[str, Consulta] = {
         sql=carregar_sql("conexao/consultas/receitas.sql"),
         conexao="AZURE"  # Defina a conexão correta no seu CONEXOES
     )
+}

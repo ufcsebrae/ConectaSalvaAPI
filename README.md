@@ -135,6 +135,53 @@ ConectaSalvaAPI/
 
 ---
 
+## Como Adicionar uma Nova Consulta
+
+Siga o passo a passo abaixo para adicionar uma nova consulta à API:
+
+1. **Crie o arquivo da consulta:**
+   - Salve o script SQL ou MDX desejado na pasta `conexao/consultas/`.
+   - Exemplo: `minha_nova_consulta.sql` ou `minha_nova_consulta.mdx`.
+
+2. **Atualize o dicionário de consultas:**
+   - No arquivo `conexao/consultas_definidas.py`, localize o dicionário (geralmente chamado `CONSULTAS_DEFINIDAS` ou similar).
+   - Adicione uma nova entrada, informando:
+     - O nome da consulta (chave).
+     - O caminho do arquivo criado.
+     - O tipo de conexão a ser usada (ex: `'sqlserver'`, `'azure'`, `'olap'`).
+   - Exemplo:
+     ```python
+     # ...existing code...
+     CONSULTAS_DEFINIDAS = {
+         # ...outras consultas...
+         "MINHA NOVA CONSULTA": {
+             "arquivo": "conexao/consultas/minha_nova_consulta.sql",
+             "conexao": "sqlserver"
+         },
+     }
+     # ...existing code...
+     ```
+
+3. **Atualize funções relacionadas:**
+   - Ajuste funções em `funcoes_globais.py`
+   - Normalmente, basta garantir que a função `selecionar_consulta_por_nome` reconheça o novo nome.
+
+4. **Utilize a nova consulta no seu código:**
+   - No `main.py` ou em outro script, chame:
+     ```python
+     df = selecionar_consulta_por_nome("MINHA NOVA CONSULTA")
+     print(df.head())
+     ```
+   - Para salvar o resultado em uma tabela SQL Server:
+     ```python
+     salvar_no_financa(df, "NOME_DA_TABELA")
+     ```
+
+5. **Teste a execução:**
+   - Execute `main.py` e verifique se a consulta roda corretamente e os dados são retornados/salvos como esperado.
+
+---
+
 ## Observações
 
 - O sistema de logs registra todas as execuções, erros e desempenho.
@@ -145,4 +192,4 @@ ConectaSalvaAPI/
 
 ## Contato
 
-Dúvidas ou sugestões? Entre em contato com o responsável pelo projeto.
+Dúvidas ou sugestões? Entre em contato com o responsável

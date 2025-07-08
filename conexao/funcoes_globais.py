@@ -93,6 +93,12 @@ def selecionar_consulta_por_nome(titulo: str):
         match titulo.strip().upper():
             case "2214":
                 consulta = consultas["2214"]
+            case "EXECUCAO DAS DESPESAS ANUAIS":
+                consulta = consultas["EXECUCAO"]
+            case "VALOR AJUSTADO MDX":
+                consulta = consultas["ValorAjustado25"]
+            case "VALOR ORIGINAL MDX":
+                consulta = consultas["ValorOriginal25"]
             case "RECEITAS":
                 consulta = consultas["Receitas"]
             case _:
