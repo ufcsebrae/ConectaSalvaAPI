@@ -22,7 +22,7 @@ def main():
     query = "RECEITAS"
     dfRECEITAS = selecionar_consulta_por_nome(query)
     print(dfRECEITAS.head())
-    salvar_no_financa(dfReceitas, "RECEITAS") 
+    salvar_no_financa(dfRECEITAS, "RECEITAS") 
     ##use -- salvar_no_financa(dfReceitas, "RECEITAS") para salvar no banco de dados FINANCA
     
 if __name__ == "__main__":
