@@ -1,0 +1,26 @@
+WITH 
+    MEMBER Measures.ValorAjustado AS 
+        '([Measures].[Valor de Despesa Orçado - Ajustado])'
+
+SELECT
+    NON EMPTY { Measures.ValorAjustado } ON COLUMNS,
+    NON EMPTY (
+        [PPA].[PPA com Fotografia].[Descrição de PPA com Fotografia],
+        [Unidade Organizacional de Ação].[Unidade Organizacional de Ação].[Nome de Unidade Organizacional de Ação],
+        [Iniciativa].[Iniciativas].[Iniciativa],
+        [Ação].[Ação].[Nome de Ação],
+        [Natureza Orçamentária].[Código Estruturado 4 nível].[Código Estruturado 4 nível],
+        [Natureza Orçamentária].[Descrição de Natureza 4 nível].[Descrição de Natureza 4 nível],
+        [Tempo].[Ano].[Número Ano],
+        [Tempo].[Mês].[Número Mês]
+    ) ON ROWS
+FROM 
+    [FINANCEIRO]
+WHERE 
+    (
+        [Sebrae].[Sebrae].[Descrição de Sebrae].&[26],
+        {
+            [Tempo].[Ano e Mês].[Número Ano e Mês].&[202501] :
+            [Tempo].[Ano e Mês].[Número Ano e Mês].&[202512]
+        }
+    )
