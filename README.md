@@ -74,7 +74,11 @@ Certifique-se de configurar corretamente o arquivo `conexao/configura_mdx.py` co
 
 - Use `main.py` para testes individuais e validações pontuais.
 - Use `main_execucao_batch.py` para rotinas automáticas e processos agendados.
-- Adapte a lista `consultas_para_rodar` conforme necessário, adicionando ou removendo títulos de consultas.
+- Adapte a lista `consultas_para_rodar` no `main_execucao_batch.py` conforme necessário, adicionando ou removendo títulos de consultas.
+- Adicone novas consultas na pasta `conexao/consultas`
+- Atualize o dicionário em `conexao/conexoes.py`, para adicionar novas conexões.
+- Atualize o dicionário em `conexao/consultas_definidas.py` para relacionar conexões e consultas.
+- Atualize o CASE/WHEN em `conexao/funcoes_globais.py` para relacionar chamar as consultas pelo título.
 
 ---
 
