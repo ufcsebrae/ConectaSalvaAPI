@@ -8,17 +8,28 @@ Este projeto tem como objetivo principal realizar consultas em fontes MDX e salv
 
 ```
 ConectaSalvaAPI/
-├── conexao/
-│ ├── init.py
-│ ├── configura_mdx.py # Configuração da conexão com fonte MDX
-│ └── funcoes_globais.py # Funções utilitárias: consulta, salvamento, log
+├── .venv/ # Ambiente virtual Python
 │
-├── main.py # Execução de uma consulta individual
-├── main_execucao_batch.py # Execução em lote (batch) com logging
-├── requirements.txt # Dependências do projeto (opcional)
-├── LICENSE # Licença do projeto (MIT)
+├── conexao/
+│ ├── pycache/ # Cache de módulos compilados
+│ ├── consultas/
+│ │ ├── conexoes.py # Configurações e métodos de conexão a fontes
+│ │ ├── configura_mdx.py # Conexão específica com fonte MDX
+│ │ ├── consultas_definidas.py# Consultas MDX pré-definidas e mapeadas
+│ │ ├── criador_dataframe.py # Lógica de transformação para DataFrame
+│ │ ├── funcoes_globais.py # Funções principais: seleção e salvamento
+│ │ └── utils.py # Funções utilitárias de apoio
+│
+├── logs/ # Diretório sugerido para logs gerados
+│
+├── main.py # Execução manual de uma única consulta
+├── main_execucao_batch.py # Execução automática de várias consultas
+├── teste_clr.py # Script de teste específico (ex: colunas CLR)
+│
+├── .gitignore # Arquivos e pastas ignoradas pelo Git
+├── requirements.txt # Dependências do projeto Python
+├── LICENSE # Licença MIT
 └── README.md # Documentação do projeto
-```
 
 ---
 
