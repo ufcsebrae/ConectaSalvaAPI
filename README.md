@@ -9,11 +9,15 @@ Este projeto tem como objetivo principal realizar consultas em fontes MDX e salv
 ```
 ConectaSalvaAPI/
 ├── conexao/
-│   ├── configura_mdx.py
-│   └── funcoes_globais.py
-├── main.py
-├── main_execucao_batch.py
-└── README.md
+│ ├── init.py
+│ ├── configura_mdx.py # Configuração da conexão com fonte MDX
+│ └── funcoes_globais.py # Funções utilitárias: consulta, salvamento, log
+│
+├── main.py # Execução de uma consulta individual
+├── main_execucao_batch.py # Execução em lote (batch) com logging
+├── requirements.txt # Dependências do projeto (opcional)
+├── LICENSE # Licença do projeto (MIT)
+└── README.md # Documentação do projeto
 ```
 
 ---
