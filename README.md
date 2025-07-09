@@ -78,7 +78,7 @@ Certifique-se de configurar corretamente o arquivo `conexao/configura_mdx.py` co
 - Adicone novas consultas na pasta `conexao/consultas`
 - Atualize o dicionário em `conexao/conexoes.py`, para adicionar novas conexões.
 - Atualize o dicionário em `conexao/consultas_definidas.py` para relacionar conexões e consultas.
-- Atualize o CASE/WHEN em `conexao/funcoes_globais.py` para relacionar chamar as consultas pelo título.
+- Atualize o CASE/WHEN em `conexao/funcoes_globais.py` para chamar as consultas pelo título.
 
 ---
 
