@@ -1,6 +1,6 @@
 # ConectaSalvaAPI
 
-Este projeto tem como objetivo principal realizar consultas em fontes MDX e salvar os resultados no banco de dados **FINANCA**, permitindo tanto execuções individuais quanto em lote (batch). A arquitetura do projeto é modular e visa facilitar a integração de novas consultas e fluxos de dados.
+Este projeto tem como objetivo principal realizar consultas em fontes MDX/SQL e salvar os resultados no banco de dados **FINANCA**, permitindo tanto execuções individuais quanto em lote (batch). A arquitetura do projeto é modular e visa facilitar a integração de novas consultas e fluxos de dados.
 
 ---
 
@@ -12,14 +12,14 @@ ConectaSalvaAPI/
 │ ├── consultas/ # Consultas MDX/SQL pré-definidas salvas nessa pasta
 │ ├── conexoes.py # Configurações e métodos de conexão a fontes
 │ ├── configura_mdx.py # Conexão específica com fonte MDX
-│ ├── consultas_definidas.py# Consultas MDX/SQ pré-definidas e mapeadas
+│ ├── consultas_definidas.py# Consultas MDX/SQL pré-definidas e mapeadas
 │ ├── criador_dataframe.py # Lógica de transformação para DataFrame
 │ ├── funcoes_globais.py # Funções principais: seleção e salvamento
 │ └── utils.py # Funções utilitárias de apoio
 │
 ├── main.py # Execução manual de uma única consulta
 ├── main_execucao_batch.py # Execução automática de várias consultas
-├── teste_clr.py # Script de teste específico (verfica DLL)
+├── teste_clr.py # Script de teste específico (verifica DLL)
 ├── requirements.txt # Dependências do projeto Python
 ├── LICENSE # Licença MIT
 └── README.md # Documentação do projeto
@@ -89,7 +89,3 @@ Certifique-se de configurar corretamente o arquivo `conexao/configura_mdx.py` co
 - Atualize o CASE/WHEN em `conexao/funcoes_globais.py` para chamar as consultas pelo título.
 
 ---
-
-## 📄 Licença
-
-Este repositório está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
