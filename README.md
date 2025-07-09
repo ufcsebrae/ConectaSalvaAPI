@@ -9,7 +9,7 @@ Este projeto tem como objetivo principal realizar consultas em fontes MDX e salv
 ```
 ConectaSalvaAPI/
 ├── conexao/
-│ ├── consultas/ # Consultas MDX/SQ pré-definidas salvas nessa pasta
+│ ├── consultas/ # Consultas MDX/SQL pré-definidas salvas nessa pasta
 │ ├── conexoes.py # Configurações e métodos de conexão a fontes
 │ ├── configura_mdx.py # Conexão específica com fonte MDX
 │ ├── consultas_definidas.py# Consultas MDX/SQ pré-definidas e mapeadas
